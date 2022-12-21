@@ -18,7 +18,7 @@ map('n', '<left>' , '<nop>')
 map('n', '<right>', '<nop>')
 
 --copy to clipboard
-map('n', '<C-c>', '"+y')
+map('v', '<C-c>', '"+y')
 
 --map leader is space
 vim.g.mapleader = " "
@@ -51,8 +51,8 @@ map('n', '<C-p>' , ':Files<CR>')
 map('n', '<C-p>' , ':Files<CR>')
 map('n', '<leader>;', ':Buffers<CR>')
 
---function runFile(file) -- declaring the function
---   local extension = string.format("*%s", file:match("^.+(%..+)$"))
---   return extension
---end
---print(runFile("seg.py"))
+--neat X clipboard integration
+--p will paste clipboard into buffer
+--c will copy entire buffer into clipboard
+map('n', '<leader>p', ':read !xsel --clipboard --output<cr>')
+map('n', '<leader>c', ':w !xsel -ib<cr><cr>')

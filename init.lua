@@ -11,6 +11,10 @@ set.softtabstop = 0
 set.expandtab = true
 set.swapfile = false
 
+--permanent undo
+set.undodir= '~/.vimdid'
+set.undofile = true
+
 
 --vim.cmd('silent! colorscheme dracula')
 vim.api.nvim_command([[
@@ -20,11 +24,3 @@ vim.api.nvim_command([[
     augroup END
 ]])
 vim.o.termguicolors = true
-
---function runFile()
---  if vim.bo.filetype == 'rust' then
---    vim.cmd('RustFmt')
---  else
---    vim.cmd('CocCommand prettier.forceFormatDocument')
---  end
---
