@@ -1,0 +1,2 @@
+install packer plugin manager:
+    paru -Sy packer nvim
