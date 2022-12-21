@@ -46,6 +46,11 @@ map('n', '\\' , ':b#<CR>')
 map('n', 'j' , 'gj')
 map('n', 'k' , 'gk')
 
+--open hotkeys
+map('n', '<C-p>' , ':Files<CR>')
+map('n', '<C-p>' , ':Files<CR>')
+map('n', '<leader>;', ':Buffers<CR>')
+
 --function runFile(file) -- declaring the function
 --   local extension = string.format("*%s", file:match("^.+(%..+)$"))
 --   return extension
