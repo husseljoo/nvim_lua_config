@@ -19,6 +19,7 @@ map('n', '<right>', '<nop>')
 
 --copy to clipboard
 map('v', '<C-c>', '"+y')
+map('n', '<C-c>', 'V"+y')
 
 --map leader is space
 vim.g.mapleader = " "
@@ -56,3 +57,7 @@ map('n', '<leader>;', ':Buffers<CR>')
 --c will copy entire buffer into clipboard
 map('n', '<leader>p', ':read !xsel --clipboard --output<cr>')
 map('n', '<leader>c', ':w !xsel -ib<cr><cr>')
+
+--Ctrl+h to stop searching
+map('n', '<C-h>', ':nohlsearch<cr>')
+map('v', '<C-h>', ':nohlsearch<cr>')

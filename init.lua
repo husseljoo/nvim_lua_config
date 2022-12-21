@@ -10,9 +10,8 @@ set.shiftwidth = 4
 set.softtabstop = 0
 set.expandtab = true
 set.swapfile = false
-
---permanent undo
-set.undodir= '~/.vimdid'
+set.relativenumber = true --  Relative line numbers
+set.undodir= '~/.vimdid' --permanent undo
 set.undofile = true
 
 
