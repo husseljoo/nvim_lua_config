@@ -87,3 +87,11 @@ require("formatter").setup({
     python = {black},
   },
 })
+
+--Enable formatter
+vim.api.nvim_exec([[
+augroup FormatAutogroup
+  autocmd!
+	  autocmd BufWritePost *.js,*.py,*.lua,*.html,*.css,*.json,*.md FormatWrite
+	augroup END
+]], true)
