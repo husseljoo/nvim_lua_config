@@ -52,8 +52,38 @@ require'lspconfig'.sumneko_lua.setup {
     settings = {
         Lua = {
             diagnostics = {
-                globals = { 'vim' }
+                globals = { 'vim' , 'use'}
             }
         }
     }
 }
+
+--Formatters
+local black = function()
+  return {
+    exe = "black",
+    stdin = false,
+  }
+end
+
+local prettier = function()
+  return {
+    exe = "prettier",
+    args = { "--stdin-filepath", vim.api.nvim_buf_get_name(0), "--double-quote" },
+    stdin = true,
+  }
+end
+
+require("formatter").setup({
+  logging = false,
+  filetype = {
+    --javascript = { prettier },
+    json = { prettier },
+    --typescript = { prettier },
+    html = { prettier },
+    css = { prettier },
+    scss = { prettier },
+    markdown = { prettier },
+    python = {black},
+  },
+})
