@@ -13,4 +13,10 @@ return require('packer').startup(function()
   use 'vim-airline/vim-airline-themes'
   use 'Mofiqul/dracula.nvim'
   use 'mhartington/formatter.nvim'
+  use 'VonHeikemen/searchbox.nvim'
+  use { 'junegunn/fzf', run = ":call fzf#install()" }
+  use { 'junegunn/fzf.vim' }
+  use 'tpope/vim-commentary'
+  use 'morhetz/gruvbox'
+
 end)

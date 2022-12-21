@@ -30,3 +30,24 @@ map('n', '<leader>s', ':source %<CR>')
 
 map('n', '<leader>ev', ':vsplit $MYVIMRC<CR>')
 map('n', '<leader>sv', ':w<CR>:so %<CR>:q<CR>')
+
+--left and right can switch buffers
+map('n', '<left>' , ':bp<CR>')
+map('n', '<right>', ':bn<CR>')
+
+--yank to end of line
+map('n', 'Y', 'y$')
+
+--toggle between buffers
+map('n', '<leader><Space>' , ':b#<CR>')
+map('n', '\\' , ':b#<CR>')
+
+--move by line
+map('n', 'j' , 'gj')
+map('n', 'k' , 'gk')
+
+--function runFile(file) -- declaring the function
+--   local extension = string.format("*%s", file:match("^.+(%..+)$"))
+--   return extension
+--end
+--print(runFile("seg.py"))
